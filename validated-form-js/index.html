@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Form</title> 
+  </head>
+
+  <body>
+    <section class="main_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-40">
+            <div class="slider">
+              <div class="slide">
+                <div class="img">
+                  <img src="imgs/img1.png" alt="" />
+                </div>
+                <h4>New Scheduling and routing options</h4>
+                <p>
+                  Lorem ipsum dolor, sit consectetur adipisicing elit.
+                  Veniam
+                </p>
+              </div>
+              <div class="slide">
+                <div class="img">
+                  <img src="imgs/img2.png" alt="" />
+                </div>
+                <h4>change the quality of your life</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam dolor, sit
+                </p>
+              </div>
+              <div class="slide">
+                <div class="img">
+                  <img src="imgs/img3.png" alt="" />
+                </div>
+                <h4>Easy to navigate and earn rewards</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet adipisicing elit.
+                  Veniam
+                </p>
+              </div>
+              <ul class="navUL">
+                <li>
+                  <a href="javascript:;" onclick="prevSlide()"></a>
+                </li>
+                <li><a href="javascript:;" onclick="nextSlide()"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-60">
+            <div class="form_block">
+              <div class="logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="" /></a>
+              </div>
+              <h1>Hello Again!</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                porro delectus accusantium consequatur?
+              </p>
+              <form action="" method="post">
+                <div class="form form_login" id="formLogin">
+                  <div class="form-item">
+                    <input
+                      type="text"
+                      id="loginEmail"
+                      autocomplete="off"
+                      name="loginEmail"
+                      required
+                    />
+                    <label for="loginEmail">Email</label>
+                  </div>
+
+                  <div class="form-item">
+                    <input
+                      type="password"
+                      id="loginPassword"
+                      autocomplete="off"
+                      name="loginPassword"
+                      required
+                    />
+                    <label for="loginPassword">Password</label>
+                  </div>
+                  <div class="password_recover">
+                    <a href="javascript:;">Recovery Password</a>
+                  </div>
+                  <div class="btns">
+                    <button
+                      class="btn btn-submit"
+                      id="btnLogin"
+                      onclick="submitLoginForm()"
+                    >
+                      Login
+                    </button>
+                    <a
+                      href="https://www.google.com/"
+                      target="_blank"
+                      class="btn btn-google"
+                    >
+                      <img src="imgs/google.png" alt="" />
+                      <span>Sign in with Google</span>
+                    </a>
+                  </div>
+                  <div class="not_signup">
+                    <span>Don't have an account yet?</span>
+                    <a href="register/index.html" id="loginBox">Sign Up</a>
+                  </div>
+                  <p class="error-msg" id="error-box"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="categories-section">
+      <div class="bannImg">
+        <img
+          src="https://kaprabazar.com/wp-content/themes/adforest/images/bannImg.jpg"
+          alt=""
+        />
+      </div>
+      <div class="cate_block">
+        <ul>
+          <li>
+            <div class="cate_box">
+              <h2>Women's Clothing</h2>
+              <a href="https://kaprabazar.com/ad_category/women-clothing/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-14-at-10.02.50-AM-488x600.jpeg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/women-clothing/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="cate_box">
+              <h2>Men's Clothing</h2>
+              <a href="https://kaprabazar.com/ad_category/men-clothing/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2022/07/Gul-Ahmed-Men-Unstitched-Collection-Vol.-1-6-499x490.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/men-clothing/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="cate_box">
+              <h2>Kids & Babies</h2>
+              <a href="https://kaprabazar.com/ad_category/kids-and-babies/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2020/05/100045812_3255122844527290_7440369260737593344_n-450x600.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/kids-and-babies/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="cate_box">
+              <h2>Bags</h2>
+              <a href="https://kaprabazar.com/ad_category/bags/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2020/05/95291629_903705836738604_2480962672846176256_o-582x582.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/bags/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="cate_box">
+              <h2>Footwear</h2>
+              <a href="https://kaprabazar.com/ad_category/footwear/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2020/05/shoe-front-176x234.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/footwear/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="cate_box">
+              <h2>Jewellery</h2>
+              <a href="https://kaprabazar.com/ad_category/jewellery/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2020/07/110347985_149866130099009_3075569527396441170_n-482x600.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/jewellery/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="cate_box">
+              <h2>Bed Sheets</h2>
+              <a href="https://kaprabazar.com/ad_category/bed-sheets/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2020/06/82926148_577095299904645_7191022877657002899_n-499x374.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/ad_category/bed-sheets/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="cate_box all-categories">
+              <h2>All Categories</h2>
+              <a href="https://kaprabazar.com/search-results/">
+                <img
+                  src="https://kaprabazar.com/wp-content/uploads/2020/10/118285426_597849050891796_190559990916026771_n-450x600.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://kaprabazar.com/search-results/"
+                class="see-more"
+              >
+                See more
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <script src="custom.js"></script>
+  </body>
+</html>

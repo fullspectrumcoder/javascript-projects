@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CRUD Operation</title>
+</head>
+
+<body>
+  <section class="main_container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 p-lg-0">
+          <div class="slider">
+            <div class="slide">
+              <div class="img">
+                <img src="imgs/img1.png" alt="" />
+              </div>
+              <h4>New Scheduling and routing options</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Veniam
+              </p>
+            </div>
+            <div class="slide">
+              <div class="img">
+                <img src="imgs/img2.png" alt="" />
+              </div>
+              <h4>change the quality of your life</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Veniam
+              </p>
+            </div>
+            <div class="slide">
+              <div class="img">
+                <img src="imgs/img3.png" alt="" />
+              </div>
+              <h4>Easy to navigate and earn rewards</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Veniam
+              </p>
+            </div>
+            <ul class="navUL">
+              <li>
+                <a href="javascript:;" onclick="prevSlide()"></a>
+              </li>
+              <li><a href="javascript:;" onclick="nextSlide()"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 p-lg-0">
+          <div class="form_block">
+            <div class="logo">
+              <a href="index.html"><img src="imgs/logo.jpg" alt="" /></a>
+            </div>
+            <h1>CRUD APP</h1>
+            <p>Please fill user details here...</p>
+            <div class="form" id="formSignup">
+              <div class="form-item" id="form-item-name"></div>
+              <div class="form-item" id="form-item-email"></div>
+              <div class="form-item" id="form-item-password"></div>
+              <div class="btns">
+                <button class="btn btn-primary" id="createUserBtn" onclick="submitUserData()">
+                  Create User
+                </button>
+              </div>
+              <button class="btn btn-danger" id="error-msg"></button>
+
+              <p id="showUser" onclick="showUserList()"><a href="javascript:;">Show All User</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" tabindex="-1" id="notification-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="tickImg">
+          <img src="imgs/tick-inside-circle.png" alt="">
+        </div>
+        <h3>User Created</h3>
+        <p>User account has been created!</p>
+        <button type="button" class="btn btn-success" id="btn-done" onclick="showModal()">Done</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid App</title>
+    <style>
+        .main_content {
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px 30px;
+            box-shadow: 0 0 10px #d5d5d5;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            display: none;
+        }
+
+
+        label {
+            width: 100%;
+            text-align: left;
+        }
+
+        .bid_input {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 1px solid #d7d7d7;
+            box-shadow: 0 0 10px #e1e1e1;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: #d93b3b;
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_content">
+        <p></p>
+        <h1>Bid App</h1>
+        <h2 id="bidAmount"></h2>
+        <img src="/imgs/1.png" alt="Dice 1" title="Dice 1" id="bidImg">
+        <label for="bidValue">Bid Amount</label>
+        <input type="number" id="bidValue" class="bid_input" placeholder="Enter Amount">
+        <label for="bidNumber">Bid Number</label>
+        <input type="number" min="1" max="6" id="bidNumber" class="bid_input" placeholder="Enter Number">
+
+        <button class="btn" type="submit" id="bidBtn" onclick="myFunction()">Submit</button>
+    </div>
+    <script src="custom.js"></script>
+</body>
+
+</html>

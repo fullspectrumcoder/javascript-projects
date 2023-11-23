@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Register Form</title>
+  </head>
+
+  <body>
+    <section class="main_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-40">
+            <div class="slider">
+              <div class="slide">
+                <div class="img">
+                  <img src="../imgs/img1.png" alt="" />
+                </div>
+                <h4>New Scheduling and routing options</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam
+                </p>
+              </div>
+              <div class="slide">
+                <div class="img">
+                  <img src="../imgs/img2.png" alt="" />
+                </div>
+                <h4>change the quality of your life</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam
+                </p>
+              </div>
+              <div class="slide">
+                <div class="img">
+                  <img src="../imgs/img3.png" alt="" />
+                </div>
+                <h4>Easy to navigate and earn rewards</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam
+                </p>
+              </div>
+              <ul class="navUL">
+                <li>
+                  <a href="javascript:;" onclick="prevSlide()"></a>
+                </li>
+                <li><a href="javascript:;" onclick="nextSlide()"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-60">
+            <div class="form_block">
+              <div class="logo">
+                <a href="../index.html"
+                  ><img src="../imgs/logo.jpg" alt=""
+                /></a>
+              </div>
+              <h1>Hello Again!</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                porro delectus accusantium consequatur?
+              </p>
+              <form>
+                <div class="form form_signup" id="formSignup">
+                  <div class="row">
+                    <div class="col-50">
+                      <div class="form-item">
+                        <input
+                          type="text"
+                          id="firstName"
+                          autocomplete="off"
+                          name="fName"
+                          required
+                        />
+                        <label for="firstName">First Name</label>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <div class="form-item">
+                        <input
+                          type="text"
+                          id="lastName"
+                          autocomplete="off"
+                          name="lName"
+                          required
+                        />
+                        <label for="lastName">Last Name</label>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <div class="form-item">
+                        <input
+                          type="tel"
+                          autocomplete="tel"
+                          maxlength="14"
+                          id="phoneNumber"
+                          pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}"
+                          name="phoneNumber"
+                          required
+                        />
+                        <label for="phoneNumber">Phone Number</label>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <div class="form-item">
+                        <input
+                          type="text"
+                          id="email"
+                          autocomplete="off"
+                          name="email"
+                          required
+                        />
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <div class="form-item">
+                        <input
+                          type="password"
+                          id="userPassword"
+                          autocomplete="off"
+                          name="userPassword"
+                          required
+                        />
+                        <label for="userPassword">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <div class="form-item">
+                        <input
+                          type="password"
+                          id="confirmPassword"
+                          autocomplete="off"
+                          name="password"
+                          required
+                        />
+                        <label for="confirmPassword">Confirmed Password</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <button
+                      class="btn btn-submit"
+                      id="btnSignUp"
+                      onclick="submitSignUpForm()"
+                    >
+                      Sign Up
+                    </button>
+                    <a
+                      href="https://www.google.com/"
+                      target="_blank"
+                      class="btn btn-google"
+                    >
+                      <img src="../imgs/google.png" alt="" />
+                      <span>Sign in with Google</span>
+                    </a>
+                  </div>
+                  <div class="not_signup">
+                    <span>Already have an account?</span>
+                    <a href="../index.html" id="signUpBox">Login</a>
+                  </div>
+                  <p class="error-msg" id="error-box"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../custom.js"></script>
+
+    <script>
+      // Phone Number Format
+      document
+        .getElementById("phoneNumber")
+        .addEventListener("input", function (e) {
+          var x = e.target.value
+            .replace(/\D/g, "")
+            .match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+          e.target.value = !x[2]
+            ? x[1]
+            : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+        });
+    </script>
+  </body>
+</html>
